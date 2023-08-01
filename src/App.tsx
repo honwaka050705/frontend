@@ -17,7 +17,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <Stack gap={3}>
+    <Stack gap={5}>
       <ApolloProvider client={client} >
         <InputNipponYear />
       </ApolloProvider>
