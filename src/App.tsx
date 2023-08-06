@@ -5,7 +5,10 @@ import {
   InMemoryCache,
   ApolloProvider
 } from "@apollo/client";
-import { Sample } from './Sample';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Stack from 'react-bootstrap/Stack';
+import { InputNipponYear } from './InputNipponYear';
+ 
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
@@ -14,9 +17,11 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client} >
-      <Sample />
-    </ApolloProvider>
+    <Stack gap={5}>
+      <ApolloProvider client={client} >
+        <InputNipponYear />
+      </ApolloProvider>
+    </Stack>
   );
 }
 
